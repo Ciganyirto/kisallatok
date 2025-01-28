@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Rendelés</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pizza Rendelés</h1>
+
+    <!-- Pizza választó szekció -->
+    <section id="pizza-selection">
+        <h2>Válassz egy pizzát</h2>
+        
+        <label for="pizza-size">Pizza mérete:</label>
+        <select id="pizza-size">
+            <option value="small">Kicsi - 1500 Ft</option>
+            <option value="medium">Közepes - 2000 Ft</option>
+            <option value="large">Nagy - 2500 Ft</option>
+        </select>
+
+        <h3>Választható feltétek:</h3>
+        <div id="toppings">
+            <label><input type="checkbox" value="sajt" data-price="200"> Sajt (200 Ft)</label><br>
+            <label><input type="checkbox" value="pepperoni" data-price="300"> Pepperoni (300 Ft)</label><br>
+            <label><input type="checkbox" value="gomba" data-price="150"> Gomba (150 Ft)</label><br>
+            <label><input type="checkbox" value="olivabogyo" data-price="100"> Olívabogyó (100 Ft)</label><br>
+        </div>
+
+        <h3>Sajttal töltött szél:</h3>
+        <label><input type="radio" name="cheese-crust" value="yes"> Igen (+500 Ft)</label>
+        <label><input type="radio" name="cheese-crust" value="no" checked> Nem</label><br>
+
+        <button id="add-to-cart">Kosárba helyezés</button>
+    </section>
+
+    <!-- Kosár szekció -->
+    <section id="cart">
+        <h2>Kosár</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Összesen: 0 Ft</p>
+        <button id="place-order">Rendelés leadása</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
